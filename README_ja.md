@@ -37,7 +37,8 @@
  Y. Sumikawa and R. Ikejiri, 
  "Mining Historical Social Issues" , 
  Intelligent Decision Technologies, Smart Innovation, Systems and Technologies, 
- Vol. 39, Springer International Publishing, 2015, pp. 587--597. 
+ Vol. 39, Springer International Publishing, 2015, pp. 587--597.   
+ [paper](http://link.springer.com/chapter/10.1007%2F978-3-319-19857-6_50)
 
 
 ライセンス
