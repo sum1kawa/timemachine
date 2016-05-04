@@ -1,37 +1,44 @@
-﻿歴史タイムマシーンのプログラム
+﻿Source codes for History Timemachine
 
 ---
 
-[歴史タイムマシーン](http://www.historymining.org/timemachine/)で使用しているプログラムのソースコードです。  
-公開しているソースコードは次の2つです。
 
-1. 入力文章へのカテゴリの付与 (classification.py)  
-  単純ベイズ分類器を実現し、文章中に出現する単語から、最も適切だと思われるカテゴリを決定します。
-
-2. 現代の問題に類似する過去の問題の抽出 (Matching.java)  
-  現代の問題と比較して、同じカテゴリが付与されている数が多い順に過去の問題を出力します。  
-  このプログラムは、各問題のカテゴリから特徴行列を作成し、その転置行列との積を計算することで結果を得ています。
+[History Timemachine](http://www.historymining.org/timemachine/) is a learning environment designed for studying historical issues.
+Although the current system only supports Japanese, it will be available in English.  
 
 
-使い方
+This system uses the following two programs:
+
+1. Document classification (classification.py)  
+  We implemented a Naive Bayes classifier.
+
+2. Detecting historical issues similar to a present one (Matching.java)  
+  We implemented a matrix multiplication for this. 
+  First, we make a feature matrix from what categories all issues are assigned.  
+  Then, the matrix is multiplicated by its transported matrix.
+
+
+Usage
 
 ---
 
-- 単純ベイズ分類器の作成  
+- Build a Naive Bayes classifier  
   `python classification`
 
-- 単純ベイズ分類器の使用  
-  `python classification.py labelling '（カテゴリを付与したい文章）'`
+- Use the classifier  
+  `python classification.py labelling '(sentences)'`
 
-- 過去の問題の抽出  
-  java Matching '（すべての問題のカテゴリ情報）'  
-  なお、1つの問題にカテゴリが付与されているかどうかを0（付与されていない） or 1（付与されている）で表すこと。  
-  1つの問題に対して、0/1を", "で区切り、問題ごとのカテゴリは、" ... "で区切ること。  
-  例： `java Matching '0, 0, 1 ... 1, 1, 1 ... 1, 1, 0'` 
+- Detecting historical issues  
+  java Matching '(category information of all issues))'  
+  Note that it is assumed that 0/1 represent whether a category is assigned to any issue or not.  
+  For each issue, a feature vector whose size is the same as the number of using categories (each element is represented by 0 or 1) is created.  
+  In one feature vector, each 0/1 is divided by ", ".  
+  In addition, the feature vectors are divided by " ... ".  
+  For example, let us consider a case where we use two historical data whose feature vectores are "0, 0, 1" and "1, 1, 1" and one present data whose feature vector is "1, 1, 0". Then, the following command outputs a result.  
+  `java Matching '0, 0, 1 ... 1, 1, 1 ... 1, 1, 0'`
 
 
-参考文献
-
+Reference
 ---
 
  Y. Sumikawa and R. Ikejiri, 
@@ -41,7 +48,8 @@
  [paper](http://link.springer.com/chapter/10.1007%2F978-3-319-19857-6_50)
 
 
-ライセンス
+
+License
 
 ---
 
