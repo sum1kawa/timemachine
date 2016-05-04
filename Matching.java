@@ -30,7 +30,7 @@
 		outputResult(k, modernIssue);
 	}
 
-    /**
+	/**
 	* From input string, this method makes a matrix.
 	*/
 	private Double[][] makeMatrix(String args){
