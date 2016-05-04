@@ -1,5 +1,4 @@
 ﻿Source codes for History Timemachine
-
 ---
 
 
@@ -19,7 +18,6 @@ This system uses the following two programs:
 
 
 Usage
-
 ---
 
 - Build a Naive Bayes classifier  
@@ -50,7 +48,6 @@ Reference
 
 
 License
-
 ---
 
 GPL and BSD Licenses for History Timemachine

@@ -1,5 +1,4 @@
-﻿歴史タイムマシーンのプログラム
-
+﻿歴史タイムマシーンのソースコード
 ---
 
 [歴史タイムマシーン](http://www.historymining.org/timemachine/)で使用しているプログラムのソースコードです。  
@@ -14,7 +13,6 @@
 
 
 使い方
-
 ---
 
 - 単純ベイズ分類器の作成  
@@ -31,7 +29,6 @@
 
 
 参考文献
-
 ---
 
  Y. Sumikawa and R. Ikejiri, 
@@ -42,7 +39,6 @@
 
 
 ライセンス
-
 ---
 
 GPL and BSD Licenses for History Timemachine
