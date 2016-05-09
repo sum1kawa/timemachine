@@ -1,8 +1,8 @@
-﻿Source codes for History Timemachine
+﻿Source codes for History Time Machine
 ---
 
 
-[History Timemachine](http://www.historymining.org/timemachine/) is a learning environment designed for studying historical issues.
+[History Time Machine](http://www.historymining.org/timemachine/) is a learning environment designed for studying historical causations.
 Although the current system only supports Japanese, it will be available in English.  
 
 
@@ -11,10 +11,18 @@ This system uses the following two programs:
 1. Document classification (classification.py)  
   We implemented a Naive Bayes classifier.
 
-2. Detecting historical issues similar to a present one (Matching.java)  
+2. Detecting historical causations similar to a present one (Matching.java)  
   We implemented a matrix multiplication for this. 
-  First, we make a feature matrix from what categories all issues are assigned.  
+  First, we make a feature matrix from what categories all causations are assigned.  
   Then, the matrix is multiplicated by its transported matrix.
+
+
+Libraries Used
+---
+
+- Python
+  1. [MeCab](http://mecab.googlecode.com/svn/trunk/mecab/doc/index.html?sess=3f6a4f9896295ef2480fa2482de521f6)
+  2. [mojimoji](https://pypi.python.org/pypi/mojimoji/0.0.5)
 
 
 Usage
@@ -26,10 +34,10 @@ Usage
 - Use the classifier  
   `python classification.py labelling '(sentences)'`
 
-- Detecting historical issues  
-  java Matching '(category information of all issues))'  
+- Detecting historical causations  
+  java Matching '(category information of all issues)'  
   Note that it is assumed that 0/1 represent whether a category is assigned to any issue or not.  
-  For each issue, a feature vector whose size is the same as the number of using categories (each element is represented by 0 or 1) is created.  
+  For each causation, a feature vector whose size is the same as the number of using categories (each element is represented by 0 or 1) is created.  
   In one feature vector, each 0/1 is divided by ", ".  
   In addition, the feature vectors are divided by " ... ".  
   For example, let us consider a case where we use two historical data whose feature vectores are "0, 0, 1" and "1, 1, 1" and one present data whose feature vector is "1, 1, 0". Then, the following command outputs a result.  
@@ -50,7 +58,7 @@ Reference
 License
 ---
 
-GPL and BSD Licenses for History Timemachine
+GPL and BSD Licenses for History Time Machine
 Copyright (c) 2016-present, Yasunobu Sumikawa, All rights reserved.
 
 Redistribution and use in source form, with or without modification,
@@ -71,5 +79,11 @@ ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-Contributer:
-  - Ryohei Ikejiri
+
+Developers
+---
+ - The main developer
+  - [Yasunobu Sumikawa](http://www.cs.is.noda.tus.ac.jp/~yas/en/index_en.html)
+
+ - Contributer
+  - [Ryohei Ikejiri](http://www.ikejiri-lab.net/)

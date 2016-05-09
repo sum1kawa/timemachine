@@ -182,7 +182,6 @@ class NaiveBayes:
                 if filename.find(cat)>-1:
                     self.catcount[cat] += 1
                     break
-
             content = ""
             for line in codecs.open(labelled_path+"/"+filename, "r", "utf-8"):
                 content += line.rstrip()
@@ -229,6 +228,7 @@ class NaiveBayes:
         # print "@ predict"
         best_category = None
         max = -sys.maxint
+
         for cat in self.catcount:
             p = self.score(wordlist, cat)
             # print "category:", cat.rstrip(), ", score:", p
@@ -276,7 +276,6 @@ class NaiveBayes:
         totalDocNum = doc.createElement('totaldocnum')
         root.appendChild(totalDocNum)
         totalDocNum.appendChild(doc.createTextNode(str(sum(self.catcount.values()))))
-
 
         for cate in self.wordcount:
             category = doc.createElement('category')

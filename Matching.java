@@ -1,4 +1,4 @@
-﻿public class Matching {
+public class Matching {
 	/**
 	* Assumption. 
 	*  1. Event representation: for each event data, a category set is used.

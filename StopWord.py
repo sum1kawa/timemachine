@@ -62,7 +62,7 @@ class StopWords:
 
     def is_stop_word(self, w):
         w = self.remove_mark(w)
-        if w in self.jaswlist or re.match(u"[ぁ-ゞ０-９0-9a-z]", w):
+        if w in self.jaswlist or re.match(u"[ぁ-ゞ０-９0-9]", w):
             return True
         match = re.search(self.cite_pattern , w)
         if match:
