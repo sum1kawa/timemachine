@@ -35,13 +35,14 @@ Usage
   `python classification.py labelling '(sentences)'`
 
 - Detecting historical causations  
-  java Matching '(category information of all issues)'  
+  `java Matching '(category information of all issues)'　k`  
   Note that it is assumed that 0/1 represent whether a category is assigned to any issue or not.  
   For each causation, a feature vector whose size is the same as the number of using categories (each element is represented by 0 or 1) is created.  
   In one feature vector, each 0/1 is divided by ", ".  
   In addition, the feature vectors are divided by " ... ".  
   For example, let us consider a case where we use two historical data whose feature vectores are "0, 0, 1" and "1, 1, 1" and one present data whose feature vector is "1, 1, 0". Then, the following command outputs a result.  
-  `java Matching '0, 0, 1 ... 1, 1, 1 ... 1, 1, 0'`
+  The second argument (k) means how many historical causations are gotten. 
+  `java Matching '0, 0, 1 ... 1, 1, 1 ... 1, 1, 0' 2`
 
 
 Reference
