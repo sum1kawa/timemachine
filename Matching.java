@@ -113,7 +113,7 @@ public class Matching {
 	 * If you want to know GLIA in detail, see the following research paper.
 	 * Yasunobu Sumikawa and Munehiro Takimoto, 
 	 * "Global Load Instruction Aggregation Based on Dimensions of Arrays", 
-	 * Computers and Electrical Engineering, Elsevier, in press.
+	 * Computers and Electrical Engineering, Elsevier, Vol. 50, pp. 180--199, 2016.
 	 * @param mat
 	 * @return a matrix
 	 */
