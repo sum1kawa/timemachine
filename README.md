@@ -59,7 +59,7 @@ Reference
 License
 ---
 
-The FreeBSD Copyright for History Time Machine
+The FreeBSD Copyright for History Time Machine  
 Copyright (c) 2016-present, Yasunobu Sumikawa, All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
